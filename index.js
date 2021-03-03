@@ -1,6 +1,9 @@
 const express = require('express');
-
 const app = express();
-app.listen(3000), () => {
-    console.log('Servidor rodando na porta 3000');
-}
+
+app.get('/', (req, res) => {
+    return res.send('Hello Word');
+});
+app.listen(1234, () => {
+    console.log('Servidor rodando na porta 1234');
+});
